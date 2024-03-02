@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="mainDiv">
+	<div id="content">
+		<div style="font-size: 24px;">TO 张兰</div>
+		<div id="code">
+        	祝你生日快乐！<br />
+            新的一岁</span><br />
+            <span class="keyword">祝你活得顺遂而又热烈</span><br /><br />
+
+            虽然年底初识<br />
+            但你的出现<br />
+            <span class="keyword">还是惊艳了我的2023</span><br /><br />
+
+            和你相处<br />
+            我一直都很开心<br />
+			来日方长<br />
+             <span class="keyword">希望有更多机会好好认识你</span><br /><br />
+
+            世界辽阔<br />
+            <span class="keyword">祝你闪闪发光</span><br /><br />
+
+   			<span class="keyword">很荣幸能认识这么好的你</span><br />
+			很羡慕有的人<br />
+            <span class="keyword"> 能被你喜欢 </span><br />
+            -- 小何<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					相遇，相识
+					<div id="elapseClock"></div>
+				</div>
+<!--			<div id="loveu">
+					<br/>
+					<div class="signature">- 小何</div>
+				</div>
+-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date('2023-12-21');
+
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>Made for 张兰, made by 小何</p>
+<p>Copyright © 2024. All Rights Reserved. </p>
+</div>
+</body>
+</html>
